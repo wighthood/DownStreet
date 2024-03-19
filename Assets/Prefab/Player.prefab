@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 6231919061932336123}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -165,7 +165,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Rigidbody2D: {fileID: 8367296409092688019}
+  m_score: {fileID: 0}
+  m_GameOver: {fileID: 0}
+  m_finalScore: {fileID: 0}
   speed: 5
+  life: 0
   isgrounded: 0
 --- !u!50 &8367296409092688019
 Rigidbody2D:
@@ -208,6 +212,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_roadSection: {fileID: 7234141920904401056, guid: 88fc01c51967d6f48acf95bac48e747f, type: 3}
   m_obstacle: {fileID: 4514420719603430044, guid: 10fd94eaf27b9c649b4947e17c2d6d12, type: 3}
+  m_enemy: {fileID: 96920984630542514, guid: 7dcd75bc58dd3314da944df1f4554436, type: 3}
 --- !u!61 &6231919061932336123
 BoxCollider2D:
   m_ObjectHideFlags: 0
