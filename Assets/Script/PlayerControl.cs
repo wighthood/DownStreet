@@ -16,7 +16,7 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] private int m_maxAmmo;
     [SerializeField] private Image m_ammoBar;
     private int m_ammo;
-    private int score =0;
+    private float score =0;
     private bool IsReloading = false;
     public int life = 5;
     public bool isgrounded = false;
@@ -54,6 +54,7 @@ public class PlayerControl : MonoBehaviour
             m_ammo++;
             RectTransform RT = m_ammoBar.GetComponent<RectTransform>();
             RT.sizeDelta = new Vector2(RT.sizeDelta.x, RT.sizeDelta.y * (m_ammo / m_maxAmmo));
+            m_ammoBar.transform.localPosition = new Vector2(transform.localPosition.x, (m_ammo - m_maxAmmo) * 3);
             StartCoroutine(reload());
         }
         else
@@ -73,7 +74,7 @@ public class PlayerControl : MonoBehaviour
         m_life.SetText("life : " + life);
         if (!isgrounded && life > 0)
         {
-            score += 100;
+            score += 10 * Time.deltaTime;
             m_score.SetText("score : " + score);
         }
         if (life <= 0)

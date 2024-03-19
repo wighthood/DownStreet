@@ -21,7 +21,7 @@ public class GenerationTrigger : MonoBehaviour
                 Vector2 obstaclePos = new Vector2(wall.transform.position.x+ Random.Range(-7,7), wall.transform.position.y + Random.Range(0,-5));
                 Instantiate(m_obstacle, obstaclePos, Quaternion.identity, wall.transform);
             }
-            for (int i = 0 ; i < Random.Range(0,5); i++)
+            for (int i = 0 ; i < Random.Range(0,2); i++)
             {
                 Vector2 enemyPos = new Vector2(wall.transform.position.x + Random.Range(-7, 7), wall.transform.position.y+ Random.Range(0,-5));
                 GameObject enemy = Instantiate(m_enemy,enemyPos, Quaternion.identity);

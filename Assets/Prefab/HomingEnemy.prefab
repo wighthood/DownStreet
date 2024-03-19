@@ -146,7 +146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_player: {fileID: 0}
   m_enemy: {fileID: 0}
-  m_speed: 2
+  m_speed: 6
 --- !u!50 &-7759780864941107709
 Rigidbody2D:
   serializedVersion: 4
