@@ -36,7 +36,8 @@ public class PlayerControl : MonoBehaviour
                 Vector2 BulletStartPos = new Vector2(transform.position.x, transform.position.y - 1.5f);
                 GameObject Bullet = Instantiate(m_bullet, BulletStartPos, Quaternion.identity);
                 RectTransform RT =  m_ammoBar.GetComponent<RectTransform>();
-                RT.sizeDelta = new Vector2(RT.sizeDelta.x, RT.sizeDelta.y*(m_ammo / m_maxAmmo));
+                RT.sizeDelta = new Vector2(RT.sizeDelta.x, m_ammo *60 );
+                m_ammoBar.transform.localPosition = new Vector2(m_ammoBar.transform.localPosition.x, (m_ammo - m_maxAmmo) * 3);
                 if (IsReloading == false)
                 {
                     StartCoroutine(reload());
@@ -47,14 +48,14 @@ public class PlayerControl : MonoBehaviour
 
     IEnumerator reload()
     {
+        IsReloading = true;
         yield return new WaitForSeconds(5f);
         if (m_ammo < m_maxAmmo)
         {
-            IsReloading = true;
             m_ammo++;
             RectTransform RT = m_ammoBar.GetComponent<RectTransform>();
-            RT.sizeDelta = new Vector2(RT.sizeDelta.x, RT.sizeDelta.y * (m_ammo / m_maxAmmo));
-            m_ammoBar.transform.localPosition = new Vector2(transform.localPosition.x, (m_ammo - m_maxAmmo) * 3);
+            RT.sizeDelta = new Vector2(RT.sizeDelta.x, m_ammo *60);
+            m_ammoBar.transform.localPosition = new Vector2(m_ammoBar.transform.localPosition.x, (m_ammo - m_maxAmmo) * 3);
             StartCoroutine(reload());
         }
         else

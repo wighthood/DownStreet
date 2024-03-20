@@ -1,3 +1,4 @@
+using TreeEditor;
 using UnityEngine;
 
 public class EnemyScript : MonoBehaviour
@@ -8,6 +9,10 @@ public class EnemyScript : MonoBehaviour
     void Update()
     {
         transform.position = Vector2.MoveTowards(transform.position, m_player.transform.position, m_speed * Time.deltaTime);
+        if(!m_player.GetComponent<PlayerControl>().isgrounded)
+        {
+            transform.position += (Vector3.up * Time.deltaTime);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
