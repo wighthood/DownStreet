@@ -3,8 +3,10 @@ using UnityEngine;
 public class MapMove : MonoBehaviour
 {
     public GameObject Player;
+    public GameObject Parent;
     [SerializeField] private Rigidbody2D m_rigidBody;
     [SerializeField] private float m_speed;
+    [SerializeField] private GameObject m_wall;
 
     void Update()
     {

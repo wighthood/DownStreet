@@ -3,6 +3,7 @@ using UnityEngine;
 public class GroundCheck : MonoBehaviour
 {
     [SerializeField] private GameObject Player;
+    
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.CompareTag("trigger") && !other.CompareTag("Enemy"))
