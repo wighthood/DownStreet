@@ -34,7 +34,7 @@ public class PlayerControl : MonoBehaviour
             {
                 m_ammo--;
                 Vector2 BulletStartPos = new Vector2(transform.position.x, transform.position.y - 1.5f);
-                GameObject Bullet = Instantiate(m_bullet, BulletStartPos, Quaternion.identity);
+                Instantiate(m_bullet, BulletStartPos,m_bullet.transform.rotation);
                 RectTransform RT =  m_ammoBar.GetComponent<RectTransform>();
                 RT.sizeDelta = new Vector2(RT.sizeDelta.x, m_ammo *60 );
                 m_ammoBar.transform.localPosition = new Vector2(m_ammoBar.transform.localPosition.x, (m_ammo - m_maxAmmo) * 3);

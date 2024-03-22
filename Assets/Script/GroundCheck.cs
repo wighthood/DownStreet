@@ -14,6 +14,9 @@ public class GroundCheck : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        Player.GetComponent<PlayerControl>().isgrounded = false;
+        if (other.CompareTag("Wall"))
+        {
+            Player.GetComponent<PlayerControl>().isgrounded = false;
+        }
     }
 }
