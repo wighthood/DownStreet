@@ -49,7 +49,7 @@ public class PlayerControl : MonoBehaviour
     IEnumerator reload()
     {
         IsReloading = true;
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(2f);
         if (m_ammo < m_maxAmmo)
         {
             m_ammo++;

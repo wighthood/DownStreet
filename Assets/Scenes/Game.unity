@@ -2620,45 +2620,17 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 4976445582364064045, guid: b24f2e972a5b9c14e9c2bb215382d8c4, type: 3}
-      propertyPath: life
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4976445582364064045, guid: b24f2e972a5b9c14e9c2bb215382d8c4, type: 3}
-      propertyPath: text
-      value: 
-      objectReference: {fileID: 1316022375}
-    - target: {fileID: 4976445582364064045, guid: b24f2e972a5b9c14e9c2bb215382d8c4, type: 3}
-      propertyPath: m_Ammo
-      value: 999
-      objectReference: {fileID: 0}
-    - target: {fileID: 4976445582364064045, guid: b24f2e972a5b9c14e9c2bb215382d8c4, type: 3}
       propertyPath: m_life
       value: 
       objectReference: {fileID: 492560312}
-    - target: {fileID: 4976445582364064045, guid: b24f2e972a5b9c14e9c2bb215382d8c4, type: 3}
-      propertyPath: MaxAmmo
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 4976445582364064045, guid: b24f2e972a5b9c14e9c2bb215382d8c4, type: 3}
       propertyPath: m_score
       value: 
       objectReference: {fileID: 1316022375}
     - target: {fileID: 4976445582364064045, guid: b24f2e972a5b9c14e9c2bb215382d8c4, type: 3}
-      propertyPath: m_speed
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4976445582364064045, guid: b24f2e972a5b9c14e9c2bb215382d8c4, type: 3}
-      propertyPath: m_bullet
-      value: 
-      objectReference: {fileID: 1834547089250676666, guid: 526879bf2091ce84e86f166b97ca125a, type: 3}
-    - target: {fileID: 4976445582364064045, guid: b24f2e972a5b9c14e9c2bb215382d8c4, type: 3}
       propertyPath: m_ammoBar
       value: 
       objectReference: {fileID: 1024910849}
-    - target: {fileID: 4976445582364064045, guid: b24f2e972a5b9c14e9c2bb215382d8c4, type: 3}
-      propertyPath: m_maxAmmo
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 4976445582364064045, guid: b24f2e972a5b9c14e9c2bb215382d8c4, type: 3}
       propertyPath: m_GameOver
       value: 
